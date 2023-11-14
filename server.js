@@ -18,6 +18,8 @@ const init = async () => {
     engines: { ejs: Ejs },
     relativeTo: __dirname,
     path: "views",
+    layout: true,
+    layoutPath: "views/layout",
   });
 
   await server.register(Inert);

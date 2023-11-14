@@ -1,8 +1,37 @@
 :root {
+  --teal-blue: #008080;
+  --hot-pink: #ff69b4;
+  --lime-green: #00ff00;
+  --sunny-yellow: #ffff00;
+  --purple-haze: #800080;
+  --turquoise: #40e0d0;
+  --radical-red: #ff355e;
+  --electric-blue: #0000ff;
+  --flaming-orange: #ffa500;
+  --bubblegum-pink: #ffc0cb;
+  --gray: #808080;
 }
 
 body {
+  display: grid;
+  grid-template-rows: 55px 1fr 55px;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--teal-blue);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--lime-green);
+}
+
+header h1 {
+  font-size: large;
+}
+
+h1 {
   margin: 0;
   padding: 0;
 }

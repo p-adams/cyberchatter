@@ -1,6 +1,8 @@
-# CyberChatter Spring Web Application
+Certainly! Below is the content formatted in Markdown:
 
-CyberChatter is a real-time chat application built using the Spring Boot framework with WebSocket support. This application enables users to engage in real-time communication, including private messaging and group chats.
+# CyberChatter Node.js + Hapi.js + WebSocket + SSR Web Application
+
+CyberChatter is a real-time chat application built using the Node.js platform with Hapi.js and WebSocket support. This application enables users to engage in real-time communication, including private messaging and group chats.
 
 ## Table of Contents
 
@@ -17,12 +19,12 @@ CyberChatter is a real-time chat application built using the Spring Boot framewo
 
 - **Real-Time Chat:**
 
-  - Utilizes Spring WebSocket for seamless real-time communication.
+  - Utilizes WebSocket with Hapi.js for seamless real-time communication.
   - Supports private messaging and group chat functionality.
 
 - **User Management:**
 
-  - Secure user authentication and authorization using Spring Security.
+  - Secure user authentication and authorization.
   - Displays user online/offline status.
   - Provides customizable user profiles.
 
@@ -53,8 +55,7 @@ CyberChatter is a real-time chat application built using the Spring Boot framewo
 
 ### Prerequisites
 
-- Java Development Kit (JDK) 8 or later
-- Apache Maven
+- Node.js and npm
 - MySQL or another relational database
 
 ### Installation
@@ -65,39 +66,43 @@ CyberChatter is a real-time chat application built using the Spring Boot framewo
    git clone https://github.com/yourusername/cyberchatter.git
    ```
 
+````
+
 ### Build
 
-```bash cd cyberchatter
-mvn clean install
+```bash
+cd cyberchatter
+npm install
 ```
 
 ### Run
 
-```
-java -jar target/cyberchatter-0.0.1-SNAPSHOT.jar
+```bash
+node server.js
 ```
 
 ### Usage
 
-```
-1) Open your browser and navigate to http://localhost:8080.
+1. Open your browser and navigate to http://localhost:3000.
 
-2) Register or log in to start using CyberChatter.
+2. Register or log in to start using CyberChatter.
 
-3) Explore real-time chat, private messaging, and group chats.
-
-```
+3. Explore real-time chat, private messaging, and group chats.
 
 ### Configuration
 
 Database Configuration
 
-CyberChatter uses MySQL by default. You can modify the database configuration in the `application.properties` file.
+CyberChatter uses MySQL by default. You can modify the database configuration in the `server.js` file.
 
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/cyberchatter
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+```javascript
+// Database configuration
+const dbConfig = {
+  host: "localhost",
+  user: "your_username",
+  password: "your_password",
+  database: "cyberchatter",
+};
 ```
 
 ### Contributing
@@ -127,3 +132,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+````

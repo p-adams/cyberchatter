@@ -1,0 +1,58 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hapi.js SSR with Socket.IO</title>
+  </head>
+  <body>
+    <!-- TODO: move to public/client.js -->
+    <h1><%= message %></h1>
+
+    <form id="messageForm">
+      <input type="text" id="messageInput" placeholder="Type a message" />
+      <button type="submit">Send</button>
+    </form>
+
+    <ul id="messages"></ul>
+
+    <script
+      src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+      integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const socket = io();
+
+      socket.on("connect", () => {
+        console.log("Connected to Socket.IO");
+      });
+
+      socket.on("disconnect", () => {
+        console.log("Disconnected from Socket.IO");
+      });
+
+      // Handle form submission
+      const form = document.getElementById("messageForm");
+      const input = document.getElementById("messageInput");
+      const messagesList = document.getElementById("messages");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const message = input.value;
+        if (message.trim() !== "") {
+          socket.emit("chat message", message);
+          input.value = "";
+        }
+      });
+
+      // Handle incoming messages
+      socket.on("chat message", (message) => {
+        const li = document.createElement("li");
+        li.textContent = message;
+        messagesList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

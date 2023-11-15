@@ -50,6 +50,11 @@ main {
 .chat-container {
   display: grid;
   grid-template-columns: 600px 1fr;
+  grid-template-areas:
+    "messages-container chat-members"
+    "textbox chat-member";
+  grid-template-rows: 500px 1fr;
+  gap: 12px;
   height: 100%;
 }
 

@@ -47,6 +47,32 @@ main {
   margin: 0 20px;
 }
 
+.chat-container {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  height: 100%;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+}
+.messages {
+  flex: 1;
+}
+
+.textbox {
+  height: 75px;
+}
+
+.textbox form {
+  display: flex;
+}
+
+.textbox form input {
+  flex: 1;
+}
+
 h1 {
   margin: 0;
   padding: 0;

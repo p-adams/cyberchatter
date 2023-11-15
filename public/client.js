@@ -11,7 +11,7 @@ socket.on("disconnect", () => {
 // Handle form submission
 const form = document.getElementById("messageForm");
 const input = document.getElementById("messageInput");
-const messagesList = document.getElementById("messages");
+const messagesList = document.getElementById("message-list");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

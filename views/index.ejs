@@ -1,12 +1,26 @@
 <!-- views/index.ejs -->
-<!DOCTYPE html>
 
-<!-- TODO: move to public/client.js -->
 <h1><%= message %></h1>
 
-<form id="messageForm">
-  <input type="text" id="messageInput" placeholder="Type a message" />
-  <button type="submit">Send</button>
-</form>
+<div class="chat-container">
+  <div class="messages-container">
+    <div class="messages">
+      <ul id="message-list"></ul>
+    </div>
 
-<ul id="messages"></ul>
+    <div class="textbox">
+      <form id="messageForm">
+        <input type="text" id="messageInput" placeholder="Type a message" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <div class="chat-members">
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+    </ul>
+  </div>
+</div>

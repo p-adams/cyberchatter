@@ -58,7 +58,7 @@ const init = async () => {
     method: "GET",
     path: "/",
     handler: (request, h) => {
-      return h.view("index", { message: "Hello from Hapi.js!" });
+      return h.view("index", { message: "Welcome to CyberChatter" });
     },
   });
 

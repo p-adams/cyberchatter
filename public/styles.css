@@ -71,6 +71,14 @@ main {
 }
 .messages {
   flex: 1;
+  outline: 1px solid var(--lime-green);
+  padding: 4px;
+}
+
+.messages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .textbox {

@@ -48,14 +48,15 @@ main {
 }
 
 .chat-container {
+  height: 100%;
+  width: 100%;
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 1fr 300px;
   grid-template-areas:
     "messages-container chat-members"
     "textbox chat-member";
   grid-template-rows: 500px 1fr;
   gap: 12px;
-  height: 100%;
 }
 
 .messages-container {

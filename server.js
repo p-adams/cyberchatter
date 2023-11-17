@@ -43,9 +43,32 @@ const init = async () => {
     console.log("User connected");
 
     // Handle chat messages
-    socket.on("chat message", (message) => {
-      console.log("Chat message:", message);
-      io.emit("chat message", message); // Broadcast the message to all connected clients
+    // Protocol Definitions:
+    /** Message Types
+     * {
+        "type": "message",
+        "data": {
+          "username": string,
+          "content": string
+          "timestamp": Date
+        }
+      }
+     */
+    socket.on("chat_message", (message) => {
+      try {
+        // TODO: Handle different message types
+        switch (message.type) {
+          case "message":
+            console.log("Chat message:", message);
+            io.emit("broadcast", message); // Broadcast the message to all connected clients
+            break;
+          default:
+            console.log("Unknown message type");
+            break;
+        }
+      } catch (error) {
+        console.error("Error parsing JSON:", error);
+      }
     });
 
     socket.on("disconnect", () => {

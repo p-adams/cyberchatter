@@ -41,6 +41,8 @@ const init = async () => {
 
   io.on("connection", (socket) => {
     console.log("User connected");
+    // TODO: implement authentication
+    socket.on("authenticate", () => {});
 
     // Handle chat messages
     // Protocol Definitions:

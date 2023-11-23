@@ -46,18 +46,8 @@ const init = async () => {
     socket.on("authenticate", () => {});
 
     // Handle chat messages
-    // Protocol Definitions:
-    /** Message Types
-     * {
-        "type": "message",
-        "data": {
-          "username": string,
-          "content": string
-          "timestamp": Date
-        }
-      }
-     */
-    socket.on("chat_message", (message) => {
+
+    socket.on("chat_message", (message: Message) => {
       try {
         // TODO: Handle different message types
         switch (message.type) {

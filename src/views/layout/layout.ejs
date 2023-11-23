@@ -15,7 +15,18 @@
     <header>
       <div class="header-content">
         <h1>CyberChatter</h1>
-        <div class="header-actions"><button>Log In</button></div>
+        <div class="header-actions"><button id="authBtn">Log In</button></div>
+        <dialog id="authDialog">
+          <label>
+            Username
+            <input />
+          </label>
+          <label>
+            Password
+            <input />
+          </label>
+          <button id="authDialogClose">close</button>
+        </dialog>
       </div>
     </header>
     <main><%- content %></main>

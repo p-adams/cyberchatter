@@ -31,3 +31,15 @@ socket.on("broadcast", (message: any) => {
   li.textContent = message.data.content;
   messagesList.appendChild(li);
 });
+
+const authBtn = document.getElementById("authBtn")!;
+const authDialog = document.getElementById("authDialog")! as HTMLDialogElement;
+const authDialogClose = document.getElementById("authDialogClose")!;
+
+authBtn.addEventListener("click", () => {
+  authDialog.open = true;
+});
+
+authDialogClose.addEventListener("click", () => {
+  authDialog.open = false;
+});

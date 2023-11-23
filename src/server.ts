@@ -3,6 +3,7 @@ import Vision from "@hapi/vision";
 import Inert from "@hapi/inert";
 import Ejs from "ejs";
 import { Server } from "socket.io";
+import Path from "path";
 
 const init = async () => {
   const server = Hapi.server({
@@ -12,14 +13,14 @@ const init = async () => {
 
   // Register Vision for template rendering
   await server.register(Vision);
-
+  console.log("dir: ", Path.join(__dirname, "views"));
   // Configure EJS as the template engine
   server.views({
     engines: { ejs: Ejs },
-    relativeTo: __dirname,
-    path: "views",
+    relativeTo: Path.join(__dirname, "views"),
+    path: "./",
     layout: true,
-    layoutPath: "views/layout",
+    layoutPath: "./layout",
   });
 
   await server.register(Inert);

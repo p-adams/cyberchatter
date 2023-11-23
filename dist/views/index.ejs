@@ -1,0 +1,31 @@
+<!-- views/index.ejs -->
+
+<h1><%= message %></h1>
+
+<div class="chat-container">
+  <div class="messages-container">
+    <div class="messages">
+      <ul id="message-list"></ul>
+    </div>
+
+    <div class="textbox">
+      <form id="messageForm">
+        <textarea
+          type="text"
+          id="messageInput"
+          rows="2"
+          placeholder="Type a message"
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <div class="chat-members">
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+    </ul>
+  </div>
+</div>

@@ -1,8 +1,8 @@
-const Hapi = require("@hapi/hapi");
-const Vision = require("@hapi/vision");
-const Inert = require("@hapi/inert");
-const Ejs = require("ejs");
-const SocketIO = require("socket.io");
+import Hapi from "@hapi/hapi";
+import Vision from "@hapi/vision";
+import Inert from "@hapi/inert";
+import Ejs from "ejs";
+import { Server } from "socket.io";
 
 const init = async () => {
   const server = Hapi.server({
@@ -37,7 +37,7 @@ const init = async () => {
   });
 
   // Socket.IO setup
-  const io = SocketIO(server.listener);
+  const io = new Server(server.listener);
 
   io.on("connection", (socket) => {
     console.log("User connected");

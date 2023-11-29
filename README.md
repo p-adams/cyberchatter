@@ -1,6 +1,6 @@
-# CyberChatter Node.js + TypeScript + Hapi.js + WebSocket + SSR Web Application
+# (WIP) CyberChatter Go + WebSocket + SSR Web Application
 
-CyberChatter is a real-time chat application built using the Node.js platform with Hapi.js and WebSocket support. This application enables users to engage in real-time communication, including private messaging and group chats.
+CyberChatter is a real-time chat application built using Go with Gorilla WebSocket support. This application enables users to engage in real-time communication, including private messaging and group chats.
 
 ### Contributing
 

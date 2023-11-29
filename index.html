@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/styles.css" />
+
+    <title>CyberChatter</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>CyberChatter</h1>
+        <div class="header-actions"><button id="authBtn">Log In</button></div>
+        <dialog id="authDialog">
+          <label>
+            Username
+            <input />
+          </label>
+          <label>
+            Password
+            <input />
+          </label>
+          <button id="authDialogClose">close</button>
+        </dialog>
+      </div>
+    </header>
+    <main>
+      <div class="chat-container">
+        <div class="messages-container">
+          <div class="messages">
+            <ul id="message-list"></ul>
+          </div>
+
+          <div class="textbox">
+            <form id="messageForm">
+              <textarea
+                type="text"
+                id="messageInput"
+                rows="2"
+                placeholder="Type a message"
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="chat-members">
+          <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./public/client.js"></script>
+  </body>
+</html>

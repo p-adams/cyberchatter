@@ -1,5 +1,23 @@
 const socket = new WebSocket("ws://localhost:8080/ws");
 
+/**
+ *  <script>
+      const socket = new WebSocket("ws://localhost:8080/ws");
+
+      socket.onmessage = function (event) {
+        const chatbox = document.getElementById("chatbox");
+        chatbox.value += event.data + "\n";
+      };
+
+      function sendMessage() {
+        const messageInput = document.getElementById("message");
+        const message = messageInput.value;
+        socket.send(message);
+        messageInput.value = "";
+      }
+    </script>
+ */
+
 socket.onopen = () => {
   console.log("Connected to Socket.IO");
 };
